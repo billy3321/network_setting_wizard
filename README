@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+#
+# Date: 2009/10/05
+# Author: billy3321(雨蒼)
+
+This is a project use to setting network in command line.
+Please run as root.
+
+
+Config file format
+
+[Setting setting_name]
+name = setting_name
+
+physical type = wired/wireless
+
+setting type = DHCE/static/ADSL
+
+ip = xxx.xxx.xxx.xxx
+ipv6 = 
+subnet mask = 24/255.255.255.0
+default gateway = xxx.xxx.xxx.xxx
+ipv6 default gateway = 
+dns primary = xxx.xxx.xxx.xxx
+dns secondary = xxx.xxx.xxx.xxx
+ipv6 dns primary =
+ipv6 dns secondary = 
+
+ADSL account = xxxx@xxx.xxx
+ADSL password = xxxxxxxxx
+
+a setting will load as an class and has each attribute.
+
+wizard has 3 choice:
+setting connection now: net_setting create tempary setting and setup the tempary setting
+setting a profile: net_setting create a setting and save to config file
+choice a profile: net_setting load a setting and setup.
+
+net_setting has 3 arguments
+--create setting_name  create a new setting
+--setup setting_name  setup a setting
+--save config_file   save setting to config_file
+--load config_file   load setting from config_file, and choice one(if more then one.).
+
+
+
+
+
