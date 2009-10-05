@@ -5,12 +5,14 @@
 # The setting.
 
 from optparse import OptionParser 
+import ConfigParser
+
 parser = OptionParser()
    
-   parser.add_option("-c", "--create", dest="create", default="Temporary_setting", help="Setting name", metavar="SETTING_NAME")
-   parser.add_option("-s", "--setup", dest="setup", default=None, help="Setting name", metavar="SETTING_NAME")
-   parser.add_option("--save", dest="save", default="net_config.ini", help="Config file path", metavar="CONFIG_FILE_PATH")
-   parser.add_option("--load", dest="load", default="net_config.ini", help="Config file path", metavar="CONFIG_FILE_PATH")
+parser.add_option("-c", "--create", dest="create", default="Temporary_setting", help="Create a setting named SETTING_NAME.", metavar="SETTING_NAME")
+parser.add_option("-s", "--setup", dest="setup", default=None, help="Setup a setting named SETTING_NAME.", metavar="SETTING_NAME")
+parser.add_option("--save", dest="save", default="net_config.ini", help="Save the setting to CONFIG_FILE_PATH", metavar="CONFIG_FILE_PATH")
+parser.add_option("--load", dest="load", default="net_config.ini", help="Load the setting to CONFIG_FILE_PATH", metavar="CONFIG_FILE_PATH")
                
-               (options, args) = parser.parse_args()
+(options, args) = parser.parse_args()
 
