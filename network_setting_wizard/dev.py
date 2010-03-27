@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 
-def get_if_list():
-    pass
+class dev_obj():
 
-def get_iw_list():
-    pass
 
-def get_moden():
-    pass
+    def get_if_list():
+        pass
+
+    def get_iw_list():
+        pass
+
+    def get_moden():
+        pass
 
